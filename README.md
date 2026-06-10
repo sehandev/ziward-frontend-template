@@ -18,7 +18,7 @@ TanStack Start, Cloudflare Workers, R2, Supabase SSR, TanStack Query/Form, Zusta
 ### Core
 
 ```sh
-pnpm add @tanstack/react-query @tanstack/react-form zod zustand @supabase/supabase-js @supabase/ssr
+pnpm add @tanstack/react-query @tanstack/react-form zod zustand idb-keyval @supabase/supabase-js @supabase/ssr
 ```
 
 `shadcn init`과 TanStack Start scaffold가 만드는 framework/UI dependency는 유지합니다.
@@ -131,10 +131,15 @@ Font는 CDN stylesheet를 document head에서 preload한 뒤 stylesheet로 link�
 - TanStack Router: route state, loader, search params
 - TanStack Form: form state and validation
 - Zustand: client-only UI/application state
+- idb-keyval: Zustand persist용 IndexedDB storage
 - Supabase SSR: cookie-based auth session and authenticated server/client clients
 - R2 binding: server-side object storage access
 
 Zustand에는 Supabase session, access token, refresh token, R2 object data 같은 server-owned state를 저장하지 않습니다.
+
+## Zustand Persist
+
+Persisted Zustand store는 `@/lib/zustand`에서 `create`와 `persist`를 import합니다. 이 `persist` wrapper는 `storage` option이 없으면 idb-keyval-backed IndexedDB storage를 기본으로 사용합니다.
 
 ## TanStack Start RSC
 

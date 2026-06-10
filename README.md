@@ -39,7 +39,6 @@ pnpm add @tanstack/react-query @tanstack/react-form zod zustand @supabase/supaba
 - `@tailwindcss/vite`
 - `tw-animate-css`
 - `shadcn`
-- `vite-tsconfig-paths`
 
 ### Cloudflare
 

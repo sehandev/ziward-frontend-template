@@ -71,6 +71,9 @@ importers:
       tw-animate-css:
         specifier: ^1.4.0
         version: 1.4.0
+      use-sync-external-store:
+        specifier: ^1.6.0
+        version: 1.6.0(react@19.2.6)
       vite-tsconfig-paths:
         specifier: ^5.1.4
         version: 5.1.4(typescript@5.9.3)(vite@7.3.3(@types/node@22.19.19)(jiti@2.7.0)(lightningcss@1.32.0))
